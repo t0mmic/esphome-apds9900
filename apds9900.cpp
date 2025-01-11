@@ -147,7 +147,7 @@ bool HOT IRAM_ATTR APDS9900Component::read_sensor_(float *proximity, float *ligh
   // This calculation works well in the 0-100mm range and under datasheet conditions.
   // In other situations, such as the presence of glass or other reflective surfaces, the result may be inaccurate.
   // Prox_data = 100 = 0mm, Prox_data = 520(+-104) = 100mm, max. 1023
-  int distance_mm = (((uint16_t)Prox_data - 100) * 100) / 420;
+  int distance_mm = ((uint16_t)Prox_data - 100) / 420;
   
   *proximity = distance_mm;
   *light = LUX;
