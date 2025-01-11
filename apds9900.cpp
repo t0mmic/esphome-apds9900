@@ -152,6 +152,7 @@ bool HOT IRAM_ATTR APDS9900Component::read_sensor_(float *proximity, float *ligh
   {
      distance_mm = -1  
   }
+  ESP_LOGD("apds9900", "Proximity_raw_data %d", Prox_data);
   
   *proximity = distance_mm;
   *light = LUX;
