@@ -71,10 +71,10 @@ sensor:
         state_class: "measurement"
 
 apds9900:
-  pdrive: 100ma
-  atime: 100.64ms
-  wtime: 2.72ms
-  again: 1x
+  led_drive: 100ma
+  als_timing: 27.2ms
+  wait_time: 2.72ms
+  ambient_light_gain: 8x
 ```
 
 ---
